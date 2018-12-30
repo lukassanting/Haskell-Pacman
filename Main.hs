@@ -25,7 +25,7 @@ update seconds = loadHighscore . lookForChest . (updatePosition seconds) . (upda
 main :: IO ()
 main = do
         -- Load the level from file
-        loadLevel <- readFile (getUnivFilePath getPathToLvlFre)
+        loadLevel <- readFile (getUnivFilePath getPathToLvl1)
         let heightBoard = length $ lines loadLevel
             listEntries = words loadLevel
             widthBoard = floor $ (fromIntegral(length $ listEntries) / fromIntegral(heightBoard))
